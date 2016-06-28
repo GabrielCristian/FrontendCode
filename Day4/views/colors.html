@@ -1,0 +1,12 @@
+
+    <select ng-model="myColor" ng-options="color as color.text group by color.class for color in colors track by color.text" ng-change="changeColor()">
+    </select>
+    <h2 ng-class="selected" >Some text</h2>
+    <input name="input" ng-model="userType" >
+    <div ng-controller="ColorsController">
+        <ul>
+            <li ng-repeat="color in colors | filter:userType">{{color.text}}</li>
+        </ul>
+    </div>
+
+
