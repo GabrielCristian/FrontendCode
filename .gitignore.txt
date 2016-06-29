@@ -1,5 +1,0 @@
-Day3/node_modules
-Day3/.idea
-Day3/*.iml
-Day3/.classpath
-Day3/bower_components
