@@ -6,7 +6,6 @@
         <ng-form name="employeeAddForm">
             <div class="row">
                 <div class="col-lg-6">
-                    <!--TODO#HR3-->
                     <div class="form-group" ng-class="{ 'has-error': employeeAddForm.firstName.$invalid && employeeAddForm.firstName.$dirty }">
                         <label for="firstName">First Name:</label>
                         <input type="text" id="firstName" name="firstName" class="form-control" ng-model="employee.firstName"
@@ -16,8 +15,9 @@
 
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
-                    <!--TODO#HR3-->
                     <div class="form-group" ng-class="{ 'has-error': employeeAddForm.lastName.$invalid && employeeAddForm.lastName.$dirty }">
                         <label for="lastName">Last Name:</label>
                         <input type="text" id="lastName" name="lastName" class="form-control" ng-model="employee.lastName"
@@ -29,7 +29,6 @@
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <!--TODO#HR3-->
                     <div class="form-group" ng-class="{ 'has-error': employeeAddForm.email.$invalid && employeeAddForm.email.$dirty }">
                         <label for="email">Email:</label>
                         <input type="text" id="email" name="email" class="form-control" ng-model="employee.email"
@@ -38,8 +37,9 @@
                              && employeeAddForm.email.$dirty">{{requiredErrorMessage}}</span>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
-                    <!--TODO#HR3-->
                     <div class="form-group" ng-class="{ 'has-error': employeeAddForm.phoneNumber.$invalid && employeeAddForm.phoneNumber.$dirty }">
                         <label for="phoneNumber">Phone Number:</label>
                         <input type="number" id="phoneNumber" name="phoneNumber" class="form-control" ng-model="employee.phoneNumber"
@@ -61,11 +61,12 @@
                              && employeeAddForm.hireDate.$dirty">{{patternDateNotRespectedMessage}}</span>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
-                    <!--TODO#HR3-->
                     <div class="form-group" ng-class="{ 'has-error': employeeAddForm.jobId.$invalid }">
                         <label for="jobId">Job:</label>
-                        <select id="job" ng-model="employee.jobId" name="job" class="form-control" required
+                        <select id="jobId" ng-model="employee.jobId" name="job" class="form-control" required
                               ng-options="job.jobTitle for job in jobs track by job.jobId">
                         </select>
                     </div>
@@ -82,6 +83,8 @@
                              && employeeAddForm.salary.$dirty">{{requiredErrorMessage}}</span>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group" ng-class="{ 'has-error': employeeAddForm.commissionPct.$invalid && employeeAddForm.commissionPct.$dirty }">
                         <label for="commissionPct">Commission:</label>
@@ -104,6 +107,8 @@
                         </select>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group" ng-class="{ 'has-error': employeeAddForm.managerId.$invalid }">
                         <label for="manager">Manager:</label>
